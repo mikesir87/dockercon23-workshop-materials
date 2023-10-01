@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meme Viewer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <div id="content">
+      <h1>{{ message }}</h1>
+      <img src="{{ meme_url }}" alt="Our random gif" />
+    </div>
+  </body>
+</html>
