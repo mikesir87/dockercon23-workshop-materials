@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meme Viewer</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="content">
+      <h1>{{ message }}</h1>
+      <img src="{{ imageUrl }}" alt="Our random gif" />
+
+      <form action="/add-meme" method="post">
+        <input type="text" placeholder="Meme URL (http://...)" name="url" required />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

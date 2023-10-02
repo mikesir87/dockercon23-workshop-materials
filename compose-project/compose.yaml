@@ -1,0 +1,15 @@
+services:
+  app:
+    # TODO - Build an image to use, targeting the dev stage
+
+    # TODO - Expose port 3000 from the container to port 3000 on the host
+
+    # TODO - Mount the src directory to /usr/local/app/src
+  
+  mongo:
+    # TODO - Specify the mongo image. Not really any additional config to provide
+
+  mongo-express:
+    # TODO - Use the mongo-express image
+
+    # TODO - Export the container's port 8081 to the host at port 8081
