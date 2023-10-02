@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "yarn install && nodemon src/index.js"
+    "dev": "yarn install && nodemon -L src/index.js"
   },
   "devDependencies": {
     "nodemon": "3.0.1"
