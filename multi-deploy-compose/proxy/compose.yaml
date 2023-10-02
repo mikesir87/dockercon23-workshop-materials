@@ -1,0 +1,33 @@
+# NO CHANGES SHOULD BE MADE TO THIS COMPOSE FILE!
+#
+# This compose file creates a Traefik container, which will watch
+# for new containers and update its routing rules to forward requests
+# to the appropriate containers. 
+#
+# Newly launched containers can define the routing rules through
+# special labels (see the `whales` service below as an example).
+# Once launched, you can open the whales app by going to
+# http://whales.localhost in your browser. Traefik will receive the
+# request (since it's listening on port 80), but then forward the
+# request to the whales service, who will generate the response.
+#
+# For debugging, you can open the Traefik dashboard in the browser
+# at http://localhost:8080/dashboard/
+
+services:
+  proxy:
+    image: traefik:2.10
+    command: --providers.docker --api.insecure
+    ports:
+      - 80:80
+      - 127.0.0.1:8080:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+  whales:
+    image: mikesir87/cats:3.0
+    labels:
+      traefik.http.routers.whales.rule: Host(`whales.localhost`)
+      traefik.http.services.whales.loadbalancer.server.port: 5000
+networks:
+  default:
+    name: proxy

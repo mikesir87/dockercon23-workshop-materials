@@ -1,0 +1,15 @@
+# PRE-REQ: This compose project assumes Traefik (a reverse proxy) is
+# already running and will forward HTTP traffic to this container.
+# 
+# This Compose should be launched by simply running `docker compose up`, 
+# but be accessible in the browser at dogs.localhost.
+# 
+# However, when using this Compose file as-is, opening the browser to
+# http://dogs.localhost simply won't work. Figure out why and get it working!
+
+services:
+  app:
+    image: mikesir87/cats:2.0
+    labels:
+      traefik.http.routers.dogs.rule: Host(`dogs.localhost`)
+      traefik.http.services.dogs.loadbalancer.server.port: 5000
