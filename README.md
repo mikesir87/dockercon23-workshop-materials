@@ -24,3 +24,8 @@ After a moment, you should see the extension appear in the left-hand navigation 
 Once you have the extension installed, you can open it, complete the quick "sign up", and then start working on the various challenges! 
 
 When you think you've got it done, simply click on the **Verify your solution** button. When you do so, various tests will run to validate your solution. If it passes, the points will be awarded!
+
+## Need help?
+
+- View the [Slides](./Slides.pdf) to refresh your memory
+- Join the [Docker Community Slack](https://dockr.ly/comm-slack) and hop into the `#dockercon23-getting-started-workshop` channel
