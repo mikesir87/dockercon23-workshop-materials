@@ -11,7 +11,7 @@ RUN adduser -D -H -u 10000 app-user
 
 # TODO - Run yarn install and yarn cache clean to keep the image size minimal
 
-# TODO - Copy in the src directory into a directory named source
+# TODO - Copy in the src directory into a directory named src
 
 # TODO - Indicate this image exposes port 3000
 
